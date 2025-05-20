@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">Email Reminder App</h1>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="create">Create Reminder</div>
+            <div class="tab" data-tab="view">View Reminders</div>
+        </div>
+        
+        <div class="tab-content active" id="create-tab">
+            <h2 class="section-title">Set a New Reminder</h2>
+            
+            <div class="input-group">
+                <label class="input-label" for="messageInput">Reminder Message:</label>
+                <textarea class="message-input" id="messageInput" placeholder="Enter your reminder message here..."></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label" for="emailInput">Email Address:</label>
+                <input type="email" class="text-input" id="emailInput" placeholder="Enter email address">
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label" for="dateInput">Date:</label>
+                <input type="date" class="date-input" id="dateInput">
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label" for="timeInput">Time:</label>
+                <input type="time" class="time-input" id="timeInput">
+            </div>
+            
+            <button class="set-reminder-btn" id="setReminder">Set Reminder</button>
+        </div>
+        
+        <div class="tab-content" id="view-tab">
+            <h2 class="section-title">Your Reminders</h2>
+            <div class="select-all-container">
+                <input type="checkbox" id="selectAllReminders" class="reminder-checkbox">
+                <label class="select-all-label" for="selectAllReminders">Select All</label>
+                <button class="delete-selected-btn" id="deleteSelectedReminders">Delete Selected</button>
+            </div>
+            <div id="remindersList" class="reminders-list"></div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification"></div>
+    
+    <script src="app.js"> </script>
+</body>
+</html>
